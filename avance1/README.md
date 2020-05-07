@@ -1,4 +1,4 @@
-﻿# avance 1
+# Avance 1
 
 ## Integrantes:
 
@@ -8,51 +8,48 @@
 
 * Guillermo Zarazúa Cruz
 
+* Alfie S. Gonzalez Salcedo
+
+* Javier Valencia Goujon
+
+* Oscar A. Aguilar Castillo
+
+
+
 ## Trabajo: 
 
 ### Resumen
 
 El 2 de mayo tuvimos una reunión para la definición de nuestro proyecto final. En ella discutimos los alcances del proyecto, el lenguaje y herramientas a utilizar para la implementación del mismo. 
 
-### Individual
+El 5 de mayo nos reunimos el equipo 5 y 9 para discutir la investigación que cada equipo llevaba y determinar la viabilidad de la fusión de ambos equipos y trabajar ambos en sistemas de recomendación. Acordamos la fusión.
 
-Maggie: 
+El 6 de mayo nos reunimos de nuevo. Se determinó Python como el lenguaje a utilizar. Decidimos usar la paquetería libmf para el desarrollo del proyecto. Al usar dicha paquetería, en una primera fase se busca avanzar en el potencial uso de la misma para sistemas de recomendación y complementar el desarrollo del proyecto como un trabajo de investigación.
+Para la primera fase decidimos una división del equipo como sigue:
 
-Leí la siguiente [referencia](https://mariobecerra.github.io/files/school_projects/tesis_lma.pdf) para revisar el uso de descenso en gradiente estocástico en los sistemas de recomendación. Quedaron dudas de la estructura que le daríamos a la información.
+* Project Manager: Dorely
+* Equipo de programación: Margarita, Guillermo, Alfie y Javier
+* Investigación, Revisión y Documentación: Oscar
 
-Memo:
 
-Realizaré un repaso de los apuntes de "Sistemas de recomendación" de la clase de métodos analíticos y se abstraerán de ellos los algoritmos y/o pasos a programar, revisando las herramientas de programación en paralelo (MNO) para ver cuáles podrían ser implementadas.
+### Project Manager
 
-Dorely:
+Además de los trabajos usuales del project manager, apoya al equipo de programación.
+Resolvimos el *milestone* (…) relacionado con los issues (…) para la tarea (…)
 
-Creé el repositorio privado del proyecto final. 
+### Equipo de programación
+
+Enfoque en la investigación del uso de la paquetería libmf. Nos apoyamos de Google Collab para poder avanzar y apoyarnos en equipo.
+Avance 
+Programamos (…) que puede consultarse en (…)
+
+### Investigación, Revisión y Documentación
+
+Se agregan issues en el project board. Se investiga esta [tesis](https://mariobecerra.github.io/files/school_projects/tesis_lma.pdf) y el siguiente [libro](https://rd.springer.com/book/10.1007%2F978-3-319-29659-3). Dichas fuentes se usan para escribir el framework del trabajo escrito.
+
 
 ## Tareas (o *milestone* o trabajo) que continúa
 
-Determinamos que nuestras tareas se dividen de la siguiente forma:
+Se buscará determinar las tareas específicas a realizar una vez investigada la paquetería libmf.
 
-Maggie:
-
-Revisar la herramientda de Zeppelin para usar Spark y así mostrársela a Erick en la próxima reunión. 
-
-Memo:
-
-Revisar la fuente de datos para entender cuál debe ser la estructura correcta de la base para la implementación del proyecto.
-
-Dorely:
-
-Revisar la fuente de datos para entender cuál debe ser la estructura correcta de la base para la implementación del proyecto.
-
-Todos:
-
-Revisar las referencias del proyecto para el entendimiento del método de descenso en gradiente para sistemas de recomendación.
-
-Conectarse a reunión el 3 de Mayo a las 3pm con el prof. y preguntar las siguientes dudas:
-
-1. Lectura de Base de datos a través de producto de AWS: Herramienta AWS + Spark.
-2. Acerca del requisito de Paralelización del método.
-3. Sobre los comparativos del error en la implementación del algoritmo.
-4. Viabilidad en el uso de Open BLAS.
-5. Sobre la imagen de Docker y si se necesita Spark.
-
+Conectarse a reunión el 9 de Mayo a las 9am con el profesor, presentar los avances y preguntar las siguientes dudas:
