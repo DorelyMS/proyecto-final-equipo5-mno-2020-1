@@ -11,20 +11,8 @@ La división anterior se puede resumir mediante la siguiente tabla:
 | 2    | Programación             |  Guillermo   |           |
 | 3    | Programación             |  Javier      |           |
 | 4    | Programación             |  Maggie      |           |
-| 5    |InvestigaciónRevisión&doc |  Oscar       |           |
+| 5    |Investigación, Revisión & documentación |  Oscar       |           |
 | 6    | Project Manager          | Dorely       | DorelyMS  |
-
-* Óscar Alejandro Aguilar Castillo
-
-* Alfie Sergio González Salcedo
-
-* Dorely Morales Santiago
-
-* Margarita M. Muñoz Sancén
-
-* Javier Valencia Goujon
-
-* Guillermo Zarazúa Cruz
 
 Título del proyecto: `Sistemas de recomendación`
 
@@ -41,4 +29,5 @@ En la carpeta [avance1](avance1) se encuentra el reporte del primer avance en nu
 Referencias del proyecto:
 
 * [Notas de curso de Métodos Analíticos sobre Sistemas de recomendación y filtrado colaborativo](https://heuristic-bhabha-ae33da.netlify.app/sistemas-de-recomendaci%C3%B3n-y-filtrado-colaborativo.html)
-* (referencia)
+* [Documentación y Papers LIBMF](https://www.csie.ntu.edu.tw/~cjlin/libmf/)
+* [Repo librería: LIBMF](https://github.com/cjlin1/libmf)
