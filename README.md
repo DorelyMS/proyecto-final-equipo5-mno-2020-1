@@ -3,6 +3,16 @@
 Este es el repositorio de Proyecto Final para la materia de Materia de Métodos Numéricos y Optimización del semestre 2020-1 en la Maestría en Ciencia de Datos, ITAM.
 
 Integrantes:
+La división anterior se puede resumir mediante la siguiente tabla:
+
+| #    | Rol                      | Persona      | Github    |
+| ---- | ------------------------ | ------------ | --------- |
+| 1    | Programación             |  Alfie       |           |
+| 2    | Programación             |  Guillermo   |           |
+| 3    | Programación             |  Javier      |           |
+| 4    | Programación             |  Maggie      |           |
+| 5    |InvestigaciónRevisión&doc |  Oscar       |           |
+| 6    | Project Manager          | Dorely       | DorelyMS  |
 
 * Óscar Alejandro Aguilar Castillo
 
