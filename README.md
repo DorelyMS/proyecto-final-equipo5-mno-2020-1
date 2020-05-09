@@ -4,7 +4,7 @@ Este es el repositorio de Proyecto Final para la materia de Materia de Métodos 
 
 Título del proyecto: `Uso de LIBMF (A LIBrary for large-scale sparse Matrix Factorization) para sistemas de recomendación de películas con una base de datos de usuarios de Netflix`
 
-Objetivo del proyecto: `$Investigación sobre el uso y explotación de la librería LIBMF empleando el lenguaje de programación Python$. El enfoque del estudio, se orienta al estudio de los parámetros y uso de paralelización en los métodos disponibles para el caso práctico de realizar recomendaciones de películas a usuarios de Netflix a través de métodos basados en reducción de dimensionalidad o modelos de factores latentes, así como su comparación y evaluación de resultados a través de una muestra de prueba y entrenamiento.`
+Objetivo del proyecto: `**Investigación sobre el uso y explotación de la librería LIBMF empleando el lenguaje de programación Python**. El enfoque del estudio, se orienta al estudio de los parámetros y uso de paralelización en los métodos disponibles para el caso práctico de realizar recomendaciones de películas a usuarios de Netflix a través de métodos basados en reducción de dimensionalidad o modelos de factores latentes, así como su comparación y evaluación de resultados a través de una muestra de prueba y entrenamiento.`
 
 Trabajo escrito (fuera del repo): https://www.overleaf.com/read/ffbjdrrxtmdm
 
@@ -14,11 +14,11 @@ Implementación (en el repo): [Implementación](https://github.com/DorelyMS/proy
 
 ## Indice del proyecto
 
-1. [Introducción]()
-2. [Planteamiento del Problema]()
-3. [Estructura del equipo]()
-4. [Organización del Repositorio]()
-5. [Requerimientos de infraestructura]()
+1. [Introducción](https://github.com/DorelyMS/proyecto-final-equipo5-mno-2020-1/blob/master/README.md#introducci%C3%B3n)
+2. [Planteamiento del Problema](https://github.com/DorelyMS/proyecto-final-equipo5-mno-2020-1/blob/master/README.md#planteamiento-del-problema-de-sistemas-de-recomendaci%C3%B3n)
+3. [Estructura del equipo](https://github.com/DorelyMS/proyecto-final-equipo5-mno-2020-1/blob/master/README.md#estructura-del-equipo)
+4. [Organización del Repositorio](https://github.com/DorelyMS/proyecto-final-equipo5-mno-2020-1/blob/master/README.md#organizaci%C3%B3n-del-repositorio)
+5. [Requerimientos de infraestructura](https://github.com/DorelyMS/proyecto-final-equipo5-mno-2020-1/blob/master/README.md#requerimientos-de-infraestructura)
 
 ## Introducción 
 
