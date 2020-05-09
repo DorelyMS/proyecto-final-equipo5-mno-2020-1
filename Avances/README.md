@@ -1,0 +1,1 @@
+Aquí se colocará un resumen de los avances de proyecto final detallado por PM y complementado por P&R Teams para efecto de reportar al profesor un status del proyecto, así como las nuevas tareas a realizar.
