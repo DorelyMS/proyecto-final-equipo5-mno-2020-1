@@ -1,0 +1,1 @@
+Esta carpeta incluirá el reporte ejecutivo de resultados obtenido con el uso de libmf sobre nuestra muestra de entrenamiento y validación para sobre nuestro caso práctico generado a partir de una instancia de AWS que generará recomendaciones utilizando paralelización con una imagen de Docker de Python .
