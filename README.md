@@ -4,7 +4,7 @@ Este es el repositorio de Proyecto Final para la materia de Materia de Métodos 
 
 Título del proyecto: `Uso de LIBMF (A LIBrary for large-scale sparse Matrix Factorization) para sistemas de recomendación de películas con una base de datos de usuarios de Netflix`
 
-Objetivo del proyecto: `**Investigación sobre el uso y explotación de la librería LIBMF empleando el lenguaje de programación Python**. El enfoque del estudio, se orienta al estudio de los parámetros y uso de paralelización en los métodos disponibles para el caso práctico de realizar recomendaciones de películas a usuarios de Netflix a través de métodos basados en reducción de dimensionalidad o modelos de factores latentes, así como su comparación y evaluación de resultados a través de una muestra de prueba y entrenamiento.`
+Objetivo del proyecto: `**Investigación sobre el uso y explotación de la librería LIBMF empleando el lenguaje de programación Python**. El enfoque del proyecto se orienta al estudio de los parámetros y el uso de paralelización en los métodos disponibles para el caso práctico de realizar recomendaciones de películas a usuarios de Netflix a través de métodos basados en reducción de dimensionalidad o modelos de factores latentes, así como su comparación y evaluación de resultados a través de una muestra de prueba y entrenamiento.`
 
 Trabajo escrito (fuera del repo): https://www.overleaf.com/read/ffbjdrrxtmdm
 
@@ -26,9 +26,9 @@ Implementación (en el repo): [Implementación](https://github.com/DorelyMS/proy
 
 ## Estructura del equipo
 
-Para el desarrollo del proyecto, la división de los integrantes considera una distribución adaptada a su porcentaje de avance, por lo que de manera inicial, se dicidió dividir al equipo en 2 partes: el primero y más grande, encargado de la implementación del uso de libmf para resolver nuestro caso práctico (**Equipo de Programación, o P-Team**) y el segundo, encargado de la documentación, revisión de los reportes de resultados para su presentación y trabajo escrito (**Equipo de Revisión, o R-Team**). Finalmente, ambos grupos fueron coordinador por un project manager (**PM**)
+Para el desarrollo del proyecto, la división de los integrantes considera una distribución adaptada a su porcentaje de avance, por lo que de manera inicial, se decidió dividir al equipo en 2 partes: el primero y más grande, encargado de la implementación del uso de libmf para resolver nuestro caso práctico (**Equipo de Programación, o P-Team**) y el segundo, encargado de la documentación, revisión de los reportes de resultados para su presentación y trabajo escrito (**Equipo de Revisión, o R-Team**). Finalmente, ambos grupos fueron coordinador por un project manager (**PM**)
 
-La anterior estructura vigente hasta el 10 de mayo, se puede resumir mediante la siguiente tabla:
+La anterior estructura vigente hasta el 10 de mayo, se resume en la siguiente tabla:
 
 | #    | Rol                                      | Persona      | Github    |
 | ---- | ------------------------ | ------------ | --------- |
@@ -41,16 +41,16 @@ La anterior estructura vigente hasta el 10 de mayo, se puede resumir mediante la
 
 ## Organización del Repositorio
 
-La organización del repositorio se realizó a través una serie de carpetas, las cuales se describen a continuación
+La organización del repositorio se realizó a través una serie de carpetas, las cuales se describen a continuación:
 
-+ **Diseño de Muestra:** [obtención de muestra](liga) en esta carpeta se desarrollará el código para la obtención de las muestras de entrenamiento y validación para la base de datos de Netflix que se usará para el reporte de resultados.
-+ **Implementación:** [reporte de implementación](liga) del uso de libmf para pruebas con diferentes muestras y parámetros. 
-+ **Acances:** contiene un resumen de los [avances de proyecto final](liga) detallado por **PM** y complementado por **P&R Teams** para efecto de reportar al prof los avances en el desarrollo del proyecto, así como las nuevas tareas a realizar.
-+ **Resultados**: incluirá el [reporte ejecutivo de resultados](liga) obtenido con la implementación del resultado final sobre nuestra base final depurada sobre nuestro caso práctico generado a partir de una instancia de AWS aplicando paralelización con una imagen de Docker.
++ **Diseño de Muestra:** En la carpeta [obtención de muestra](liga) se desarrollará el código para la obtención de las muestras de entrenamiento y validación para la base de datos de Netflix que se usará para el reporte de resultados.
++ **Implementación:** [Reporte de implementación](liga) del uso de libmf para pruebas con diferentes muestras y parámetros. 
++ **Avances:** Contiene un resumen de los [avances de proyecto final](liga) detallado por **PM** y complementado por **P&R Teams** para efecto de reportar al prof los avances en el desarrollo del proyecto, así como las nuevas tareas a realizar.
++ **Resultados**: Incluirá el [Reporte ejecutivo de resultados](liga) obtenido con la implementación del resultado final sobre nuestra base final depurada sobre nuestro caso práctico generado a partir de una instancia de AWS aplicando paralelización con una imagen de Docker.
 
 ## Requerimientos de infraestructura
 
-Con el propósito de reproducibilidad del proyecto y para que todos los equipos (**P-Team**, **R-Team** y **PM**) tuvieran un entorno común de trabajo, se empleó la imagen de docker basada en Python del curso MNO 2020 (palmoreck/jupyterlab_r_kernel:1.1.0) así como una intancia de AWS con las siguientes características.
+Con el propósito de reproducibilidad del proyecto y para que todos los equipos (**P-Team**, **R-Team** y **PM**) tuvieran un entorno común de trabajo, se empleó la imagen de docker basada en Python del curso MNO 2020 (palmoreck/jupyterlab_r_kernel:1.1.0) así como una instancia de AWS con las siguientes características:
 
 ```bash
 docker run --rm -v <ruta a mi directorio>:/datos --name jupyterlab_numerical
