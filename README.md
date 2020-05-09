@@ -1,6 +1,6 @@
 ## Proyecto Final del curso MNO-2020-1: Equipo 5 y 9
 
-Este es el repositorio de Proyecto Final para la materia de Materia de Métodos Numéricos y Optimización del semestre 2020-1 en la Maestría en Ciencia de Datos, ITAM.
+Este es el repositorio de Proyecto Final para la materia de Métodos Numéricos y Optimización del semestre 2020-1 en la Maestría en Ciencia de Datos, ITAM.
 
 Título del proyecto: `Uso de LIBMF (A LIBrary for large-scale sparse Matrix Factorization) para sistemas de recomendación de películas con una base de datos de usuarios de Netflix`
 
@@ -26,7 +26,7 @@ Implementación (en el repo): [Implementación](https://github.com/DorelyMS/proy
 
 ## Estructura del equipo
 
-Para el desarrollo del proyecto, la división de los integrantes considera una distribución adaptada a su porcentaje de avance, por lo que de manera inicial, se decidió dividir al equipo en 2 partes: el primero y más grande, encargado de la implementación del uso de libmf para resolver nuestro caso práctico (**Equipo de Programación, o P-Team**) y el segundo, encargado de la documentación, revisión de los reportes de resultados para su presentación y trabajo escrito (**Equipo de Revisión, o R-Team**). Finalmente, ambos grupos fueron coordinador por un project manager (**PM**)
+Para el desarrollo del proyecto, la división de los integrantes considera una distribución adaptada a su porcentaje de avance, por lo que de manera inicial, se decidió dividir al equipo en 2 partes: el primero y más grande, encargado de la implementación del uso de libmf para resolver nuestro caso práctico (**Equipo de Programación, o P-Team**) y el segundo, encargado de la documentación, revisión de los reportes de resultados para su presentación y trabajo escrito (**Equipo de Revisión, o R-Team**). Finalmente, ambos grupos fueron coordinados por un project manager (**PM**)
 
 La anterior estructura vigente hasta el 10 de mayo, se resume en la siguiente tabla:
 
@@ -45,8 +45,8 @@ La organización del repositorio se realizó a través una serie de carpetas, la
 
 + **Diseño de Muestra:** En la carpeta [obtención de muestra](liga) se desarrollará el código para la obtención de las muestras de entrenamiento y validación para la base de datos de Netflix que se usará para el reporte de resultados.
 + **Implementación:** [Reporte de implementación](liga) del uso de libmf para pruebas con diferentes muestras y parámetros. 
-+ **Avances:** Contiene un resumen de los [avances de proyecto final](liga) detallado por **PM** y complementado por **P&R Teams** para efecto de reportar al prof los avances en el desarrollo del proyecto, así como las nuevas tareas a realizar.
-+ **Resultados**: Incluirá el [Reporte ejecutivo de resultados](liga) obtenido con la implementación del resultado final sobre nuestra base final depurada sobre nuestro caso práctico generado a partir de una instancia de AWS aplicando paralelización con una imagen de Docker.
++ **Avances:** Contiene un resumen de los [avances de proyecto final](liga) detallado por **PM** y complementado por **P&R Teams** para efecto de reportar al profesor los avances en el desarrollo del proyecto, así como las nuevas tareas a realizar.
++ **Resultados**: Incluirá el [Reporte ejecutivo de resultados](liga) obtenido con la implementación del resultado final sobre nuestra base final depurada sobre nuestro caso práctico y generado a partir de una instancia de AWS aplicando paralelización con una imagen de Docker.
 
 ## Requerimientos de infraestructura
 
