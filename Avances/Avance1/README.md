@@ -29,7 +29,7 @@ Para la primera fase decidimos una división del equipo como sigue:
 * Equipo de programación: Margarita, Guillermo, Alfie y Javier
 * Investigación, Revisión y Documentación: Oscar
 
-El 7 de mayo tuvimos un workshop para el entendimiento del problema que queremos resolver a partir del estudio conjunto de las [notas de referencia base](https://heuristic-bhabha-ae33da.netlify.app/sistemas-de-recomendaci%C3%B3n-y-filtrado-colaborativo.html) así como la implementación del [ejercicio muestra libmf](https://github.com/DorelyMS/proyecto-final-equipo5-mno-2020-1/tree/master/Implementaci%C3%B3n/Ejemplo0_libmf) ejecutado a través de línea de comandos de bash y arrojando [resultados para las muestras de entrenamiento y validación] [https://github.com/DorelyMS/proyecto-final-equipo5-mno-2020-1/blob/master/Implementaci%C3%B3n/Ejemplo0_libmf/salida_ejemplo_inicial.txt].
+El 7 de mayo tuvimos un workshop para el entendimiento del problema que queremos resolver a partir del estudio conjunto de las [notas de referencia base](https://heuristic-bhabha-ae33da.netlify.app/sistemas-de-recomendaci%C3%B3n-y-filtrado-colaborativo.html) así como la implementación del [ejercicio muestra libmf](https://github.com/DorelyMS/proyecto-final-equipo5-mno-2020-1/tree/master/Implementaci%C3%B3n/Ejemplo0_libmf) ejecutado a través de línea de comandos de bash y arrojando [resultados para las muestras de entrenamiento y validación.](https://github.com/DorelyMS/proyecto-final-equipo5-mno-2020-1/blob/master/Implementaci%C3%B3n/Ejemplo0_libmf/salida_ejemplo_inicial.txt)
 
 Los avances logrados sobre los equipos se describen a continuación:
 
@@ -37,7 +37,7 @@ Los avances logrados sobre los equipos se describen a continuación:
 
 Se acordó que además de los trabajos usuales del project manager, apoya al equipo de programación en la investigación del uso de libmf y apoyo sobre el planteamiento del problema para el trabajo escrito.
 
-Resolvimos el *milestone* de **Definición de Tema de Proyecto Final** relacionado con el issue #4 para la tarea del planteamiento inicial del proyecto. Seleccionando como lenguaje de Programación Python y seleccionamos la imagen de Docker basada en Python del curso MNO 2020 (palmoreck/jupyterlab_r_kernel:1.1.0).
+Resolvimos el *milestone* de **Definición de Tema de Proyecto Final** relacionado con el issue #4 para la tarea del planteamiento inicial del proyecto. Seleccionando como lenguaje de Programación Python y seleccionamos la imagen de Docker basada en Python del curso MNO 2020 (palmoreck/jupyterlab_numerical:1.1.0).
 
 ### Equipo de programación
 
@@ -47,7 +47,7 @@ Avanzamos sobre el *milestone* de **Implementación** resolviendo el issue #8 so
 
 ### Investigación, Revisión y Documentación
 
-Se agregaron issues en el project board. Se estudiaron las notas de referencia base](https://heuristic-bhabha-ae33da.netlify.app/sistemas-de-recomendaci%C3%B3n-y-filtrado-colaborativo.html). Y se está consultando el material de esta [tesis](https://mariobecerra.github.io/files/school_projects/tesis_lma.pdf) y el siguiente [libro](https://rd.springer.com/book/10.1007%2F978-3-319-29659-3) para escribir el framework del trabajo escrito.
+Se agregaron issues en el project board. Se estudiaron las [notas de referencia base](https://heuristic-bhabha-ae33da.netlify.app/sistemas-de-recomendaci%C3%B3n-y-filtrado-colaborativo.html). Y se está consultando el material de esta [tesis](https://mariobecerra.github.io/files/school_projects/tesis_lma.pdf) y el siguiente [libro](https://rd.springer.com/book/10.1007%2F978-3-319-29659-3) para escribir el framework del trabajo escrito.
 
 ## Tareas (o *milestone* o trabajo) que continúa
 
