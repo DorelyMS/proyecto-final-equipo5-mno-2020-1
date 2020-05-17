@@ -8,9 +8,9 @@ Objetivo del proyecto: `**Investigación sobre el uso y explotación de la libre
 
 Trabajo escrito (fuera del repo): https://www.overleaf.com/read/ffbjdrrxtmdm
 
-Presentación de Resultados (en el repo): [liga_presentación]()
+Presentación de Resultados (en el repo): [liga_presentación](https://github.com/DorelyMS/proyecto-final-equipo5-mno-2020-1/tree/master/Resultados)
 
-Implementación (en el repo): [Implementación](https://github.com/DorelyMS/proyecto-final-equipo5-mno-2020-1/tree/master/Implementaci%C3%B3n) 
+Implementación (en el repo): [Implementación](https://github.com/DorelyMS/proyecto-final-equipo5-mno-2020-1/tree/master/Implementation) 
 
 ## Indice del proyecto
 
@@ -43,14 +43,15 @@ La anterior estructura vigente hasta el 10 de mayo, se resume en la siguiente ta
 
 La organización del repositorio se realizó a través una serie de carpetas, las cuales se describen a continuación:
 
-+ **Diseño de Muestra:** En la carpeta [obtención de muestra](liga) se desarrollará el código para la obtención de las muestras de entrenamiento y validación para la base de datos de Netflix que se usará para el reporte de resultados.
-+ **Implementación:** [Reporte de implementación](liga) del uso de libmf para pruebas con diferentes muestras y parámetros. 
-+ **Avances:** Contiene un resumen de los [avances de proyecto final](liga) detallado por **PM** y complementado por **P&R Teams** para efecto de reportar al profesor los avances en el desarrollo del proyecto, así como las nuevas tareas a realizar.
-+ **Resultados**: Incluirá el [Reporte ejecutivo de resultados](liga) obtenido con la implementación del resultado final sobre nuestra base final depurada sobre nuestro caso práctico y generado a partir de una instancia de AWS aplicando paralelización con una imagen de Docker.
++ **Referencias:** En el apartado de [Referencias](https://github.com/DorelyMS/proyecto-final-equipo5-mno-2020-1/tree/master/Referencias) se añaden todos los textos que se consultaron para la realización de este trabajo.
++ **Diseño de Muestra:** En la carpeta [obtención de muestra](https://github.com/DorelyMS/proyecto-final-equipo5-mno-2020-1/tree/master/Sampling_Design) se desarrolló el código para la obtención de las muestras de entrenamiento y validación para la base de datos de Netflix que se usará para el reporte de resultados.
++ **Implementación:** [Reportes de implementación](https://github.com/DorelyMS/proyecto-final-equipo5-mno-2020-1/tree/master/Implementation) del uso de libmf para pruebas con diferentes muestras y parámetros. 
++ **Avances:** Contiene un resumen de los [avances de proyecto final](https://github.com/DorelyMS/proyecto-final-equipo5-mno-2020-1/tree/master/Avances) detallado por **PM** y complementado por **P&R Teams** para efecto de reportar al profesor los avances en el desarrollo del proyecto, así como las nuevas tareas a realizar.
++ **Resultados**: Incluirá el [Reporte ejecutivo de resultados](https://github.com/DorelyMS/proyecto-final-equipo5-mno-2020-1/tree/master/Resultados) obtenido con la implementación del resultado final sobre nuestra base final depurada para nuestro caso práctico generado a partir de una instancia de AWS aplicando paralelización con una imagen de Docker.
 
 ## Requerimientos de infraestructura
 
-Con el propósito de reproducibilidad del proyecto y para que todos los equipos (**P-Team**, **R-Team** y **PM**) tuvieran un entorno común de trabajo, se empleó la imagen de docker basada en Python del curso MNO 2020 (palmoreck/jupyterlab_r_kernel:1.1.0) así como una instancia de AWS con las siguientes características:
+Con el propósito de reproducibilidad del proyecto y para que todos los equipos (**P-Team**, **R-Team** y **PM**) tuvieran un entorno común de trabajo, se empleó la imagen de docker basada en Python del curso MNO 2020 (palmoreck/jupyterlab_numerical:1.1.0) así como una instancia de AWS con las siguientes características:
 
 ```bash
 docker run --rm -v <ruta a mi directorio>:/datos --name jupyterlab_numerical
