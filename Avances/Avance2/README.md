@@ -34,7 +34,7 @@ Respecto a los issues #14 #15 #16 y #22 relacionados con el *milestone* de **Imp
 
 + Maggie genera el código para la lectura de la base de *Netflix prize* y la separación en *train* y *test*, así como revisión y notas a la Introducción del trabajo escrito.
 + Alfie realizó códigos en formato .py para la lectura y centralización de las calificaciones de la base muestra de *Netflix*.
-+ Guillermo generó códigos de ejemplo con el uso de funciones de libmf sobre Python con matrices aleatorias.
++ Guillermo generó códigos de ejemplo con el uso de funciones de libmf (con shell y magic commands) y libmf-python sobre Python con matrices aleatorias
 
 Respecto al *milestone* de **Sampling Design** tuvimos los siguientes avances:
 
