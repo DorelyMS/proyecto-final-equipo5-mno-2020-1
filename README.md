@@ -78,6 +78,50 @@ La organización del repositorio se realizó a través una serie de carpetas, la
 + **Resultados**: Incluirá el [Reporte ejecutivo de resultados](https://github.com/DorelyMS/proyecto-final-equipo5-mno-2020-1/tree/master/Resultados) obtenido con la implementación del resultado final sobre nuestra base final depurada para nuestro caso práctico generado a partir de una instancia de AWS aplicando paralelización con una imagen de Docker.
 
 ## Requerimientos de infraestructura
+A continuación se describen los pasos utilizados para la creación de la instancia en AWS para poder trabajar de manera más rapida y eficiente.
+### Crear la maquina EC2
+Se utilizó una cuenta de AWS Educate lo cual limitó un poco la opciones a elegir de maquinas EC2.
+**Paso 1**: Se lanzó una instancia de AWS de tipo EC2, la Amazon Machine Image (AMI) que se eligió fue una del tipo  ubuntu/images/hvm-ssd/ubuntu-bionic-18.04-amd64-server-20200408
+
+**Paso 2**: El tipo de instacia que se eligió fue una t2.2xlarge que cuenta con 8 VCPUs y tiene 32 GB de memoria RAM y 32GB de memoria en disco duro, originalmente habíamos elegido usar una maquina de tipo p2.xlarge que cuenta con GPUs disponibles pero debido a las restricciones de la cuenta AWS Educate no fue posible.
+
+**Paso 3**: Se configuró la instancia siguiendo los pasos de la wiki  de AWS del curso de MNO situados en esta liga web https://github.com/ITAM-DS/analisis-numerico-computo-cientifico/wiki/1.1.Configuracion-de-servicios-basicos-para-uso-de-AWS
+En resumen, se tuvo que configurar una VPC, una subnet pública, un grupo de seguridad,una IP elástica para no tener que cambiar el commando de connección cada vez que quisieramos conectarnos a la EC2.
+Grupo de seguridad
+Se hicieron algunas modificaciones al grupo de seguridad estandar para permitir que todos los miembros del equipo se pudieran conectar de manera facil al servidor de la EC2
+
+
+
+**Paso 4**: Se creó un key-pair llamado "key-mno-2020.pem"
+
+El resultado final fue esta EC2
+
+### Instalación de herramientas de trabajo en la EC2
+
+Inicialmente se instaló Anaconda en la EC2 pero al final se decidió trabajar con un contenedor de Docker que contiene todos los requerimientos necesarios para ejecutar el codigo del proyecto.
+Se corrió un bash script que estaba en la wiki de AWS del repositorio de MNO para instalar git y docker 
+
+Se descargó y utilizó la imagen de docker jupyter_numerical para correr nuestro proyecto.
+
+El comando usado para correr la imagen fue el siguiente
+Correr docker imagen jupyter_numerical
+```bash
+sudo docker run --rm -v /home/ubuntu:/datos --name jupyterlab_numerical -p 8888:8888 -d palmoreck/jupyterlab_numerical:1.1.0 --ip=0.0.0.0 --no-browser
+```
+### Conneción a la EC2 y al servidor de Jupyter Lab
+
+Para conectarse a la EC2 se usó el siguiente comando en la dirección donde estaba la llave.pem :
+```bash
+ssh -i key-mno-2020.pem ubuntu@18.205.126.183
+```
+También al inicio del proyecto antes de configurar correctamente el security group fue necesario usar un comando para hacer portforwarding de la EC2 a nuestra computadora y así visualizar el puerto con el Jupyter Notebook:
+```bash
+ssh -i "key-mno-2020.pem" -NL localhost:5555:localhost:8888 ubuntu@18.205.126.183
+```
+
+Finalmente una vez configurado el security group fue posible conectarse al servior de Jupyter Lab usando una dirección IP e introduciendo el password: querty
+http://18.205.126.183:8888/
+
 
 Con el propósito de reproducibilidad del proyecto y para que todos los equipos (**P-Team**, **R-Team** y **PM**) tuvieran un entorno común de trabajo, se empleó la imagen de docker basada en Python del curso MNO 2020 (palmoreck/jupyterlab_numerical:1.1.0) así como una instancia de AWS con las siguientes características:
 
