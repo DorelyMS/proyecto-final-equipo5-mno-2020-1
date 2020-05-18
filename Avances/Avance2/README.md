@@ -18,7 +18,7 @@
 
 ### Resumen
 
-El 9 de mayo tuvimos reunión con Erick para la revisión de Avances1. Tras el feedback recibido, se agregó como objetivo del proyecto el uso de factorización de matrices No-Negativas y como tarea añadir ejemplos donde se usan las matrices One-Class y Binarias que también están disponibles en la librería. Se decidió además crear un Milestone relativo al diseño de las muestras de películas de Netflix que serán utilizadas para correr libmf con entrenamiento y validación.
+El 9 de mayo tuvimos reunión con Erick para la revisión de Avances1. Tras el feedback recibido, se agregó como objetivo del proyecto el uso de factorización de matrices No-Negativas y como tarea añadir ejemplos donde se usen las matrices One-Class y Binarias que también están disponibles en la librería. Se decidió además crear un Milestone relativo al diseño de las muestras de películas de Netflix que serán utilizadas para correr libmf con entrenamiento y validación.
 
 El 13 de mayo nos reunimos para discutir avances individuales en el proyecto, así como asignar tareas nuevas. Javier realizó una prueba exitosa levantando una instancia EC2 en AWS, además se verificó que tanto Maggie, como Dorely pudieron conectarse a dicha instancia. Además, se acordó que para garantizar cumplir con el 90% del trabajo el viernes 22 de mayo, el objetivo será utilizar un extracto de la base original para la implementación y presentación de resultados. En caso de lograr los avances y el reporte satisfactoriamente anterior a lo previsto, se buscará correr la base completa del *Netflix prize*.
 
@@ -26,7 +26,7 @@ Los avances logrados sobre los equipos se describen a continuación:
 
 ### Project Manager
 
-Avanzamos en el *milestone* de **Implementación** relacionado con los issues #14 #15 #16 y #22 logrando generar las bases pequeñas de entrenamiento, pruebas con funciones disponibles en libmf Python así como levantar una instancia en AWS. En el *milestone* de **Trabajo Escrito** avanzamos con los issues #19 #20 #30 y #32 respecto a la la Introducción del trabajo escrito y parámetros de la librería, así como ejemplos de algunas factoirizaciones disponibles. En general, encargada de dar seguimiento y revisión de ambos milestones.
+Avanzamos en el *milestone* de **Implementación** relacionado con los issues #14 #15 #16 y #22 logrando generar las bases pequeñas de entrenamiento, pruebas con funciones disponibles en libmf Python así como levantar una instancia en AWS. En el *milestone* de **Trabajo Escrito** avanzamos con los issues #19 #20 #30 y #32 respecto a la la Introducción del trabajo escrito y parámetros de la librería, así como ejemplos de algunas factorizaciones disponibles. En general, encargada de dar seguimiento y revisión de ambos milestones.
 
 ### Equipo de programación
 
@@ -45,7 +45,7 @@ Respecto al *milestone* de **Sampling Design** tuvimos los siguientes avances:
 + En lo relativo al issue #19, Óscar realiza la Introducción del trabajo escrito en el [overleaf](https://www.overleaf.com/read/ffbjdrrxtmdm). Se crea una tabla para indicar los parámetros de la librería LIBMF y las entradas para utilizar distintos métodos. Se describen dichos métodos de manera general y se proporcionan ejemplos básicos de dichas matrices. Después de las revisiones de Maggie y Dorely, se agrega la introducción al [README del proyecto](https://github.com/DorelyMS/proyecto-final-equipo5-mno-2020-1). 
 + Javier investigó y documentó en el documento de Overleaf ejemplos de uso prácticos para matrices Binarias y One-Class issue #20.
 + Respecto al issue #10 agregaron referencias y se realizan primeras revisiones a documentación de los códigos.
-+ Maggie agrega ejemplo prácticos de factorización de matrices no negativas (NPF) issue #30.
++ Maggie agrega ejemplo práctico de factorización de matrices no negativas (NPF) issue #30.
 
 ## Tareas (o *milestone* o trabajo) que continúa
 
