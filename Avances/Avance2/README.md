@@ -43,6 +43,7 @@ Respecto al *milestone* de **Sampling Design** tuvimos los siguientes avances:
 ### Investigación, Revisión y Documentación
 
 + En lo relativo al issue #19, Óscar realiza la Introducción del trabajo escrito en el [overleaf](https://www.overleaf.com/read/ffbjdrrxtmdm). Se crea una tabla para indicar los parámetros de la librería LIBMF y las entradas para utilizar distintos métodos. Se describen dichos métodos de manera general y se proporcionan ejemplos básicos de dichas matrices. Después de las revisiones de Maggie y Dorely, se agrega la introducción al [README del proyecto](https://github.com/DorelyMS/proyecto-final-equipo5-mno-2020-1). 
++ Javier investigó y documentó en el documento de Overleaf ejemplos de uso prácticos para matrices Binarias y One-Class issue #20.
 + Respecto al issue #10 agregaron referencias y se realizan primeras revisiones a documentación de los códigos.
 + Maggie agrega ejemplo prácticos de factorización de matrices no negativas (NPF) issue #30.
 
