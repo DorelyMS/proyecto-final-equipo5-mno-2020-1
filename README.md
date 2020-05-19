@@ -78,7 +78,8 @@ La organización del repositorio se realizó a través una serie de carpetas, la
 + **Resultados**: Incluirá el [Reporte ejecutivo de resultados](https://github.com/DorelyMS/proyecto-final-equipo5-mno-2020-1/tree/master/Resultados) obtenido con la implementación del resultado final sobre nuestra base final depurada para nuestro caso práctico generado a partir de una instancia de AWS aplicando paralelización con una imagen de Docker.
 
 ## Requerimientos de infraestructura
-A continuación, se describen los pasos utilizados para la creación de la instancia en AWS para poder trabajar de manera más rápida y eficiente.
+Con el propósito de reproducibilidad del proyecto y para que todos los equipos (**P-Team**, **R-Team** y **PM**) tuvieran un entorno común de trabajo, se empleó la imagen de docker basada en Python del curso MNO 2020 (palmoreck/jupyterlab_numerical:1.1.0) así como una instancia de AWS. A continuación, se describen los pasos utilizados para la creación de la instancia en AWS para poder trabajar de manera más rápida y eficiente. 
+
 ### Crear la maquina EC2
 Se utilizó una cuenta de AWS Educate lo cual limitó un poco la opciones a elegir de máquinas EC2.
 **Paso 1**: Se lanzó una instancia de AWS de tipo EC2, la Amazon Machine Image (AMI) que se eligió fue una del tipo  **ubuntu/images/hvm-ssd/ubuntu-bionic-18.04-amd64-server-20200408**  
@@ -146,13 +147,4 @@ http://18.205.126.183:8888/
 ![AMI](Imagenes/login.png)
 ![AMI](Imagenes/jupyterlab.png)
 
-Con el propósito de reproducibilidad del proyecto y para que todos los equipos (**P-Team**, **R-Team** y **PM**) tuvieran un entorno común de trabajo, se empleó la imagen de docker basada en Python del curso MNO 2020 (palmoreck/jupyterlab_numerical:1.1.0) así como una instancia de AWS con las siguientes características:
 
-```bash
-docker run --rm -v <ruta a mi directorio>:/datos --name jupyterlab_numerical
--p 8888:8888 -d palmoreck/jupyterlab_numerical:1.1.0
-```
-Documentación de la imagen de docker palmoreck/jupyterlab_numerical:1.1.0 en [liga](https://github.com/palmoreck/dockerfiles/tree/master/jupyterlab/numerical)
-
-
-Con ello se habilitó la posibilidad de realizar el trabajo mediante sucesivos *Jupyter Notebooks*.
