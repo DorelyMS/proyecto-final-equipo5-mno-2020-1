@@ -84,25 +84,27 @@ Se utilizó una cuenta de AWS Educate lo cual limitó un poco la opciones a eleg
 **Paso 1**: Se lanzó una instancia de AWS de tipo EC2, la Amazon Machine Image (AMI) que se eligió fue una del tipo  **ubuntu/images/hvm-ssd/ubuntu-bionic-18.04-amd64-server-20200408**
 ![AMI](Imagenes/AMI.png)
 **Paso 2**: El tipo de instancia que se eligió fue una t2.2xlarge que cuenta con 8 VCPUs y tiene 32 GB de memoria RAM y 32GB de memoria en disco duro, originalmente habíamos elegido usar una máquina de tipo p2.xlarge que cuenta con GPUs disponibles pero debido a las restricciones de la cuenta AWS Educate no fue posible.
-
+![InstanceType](Imagenes/instance-type.png)
 **Paso 3**: Se configuró la instancia siguiendo los pasos de la wiki  de AWS del curso de MNO situados en esta liga web https://github.com/ITAM-DS/analisis-numerico-computo-cientifico/wiki/1.1.Configuracion-de-servicios-basicos-para-uso-de-AWS
 En resumen, se tuvo que configurar una VPC, una subnet pública, un grupo de seguridad, una IP elástica para no tener que cambiar el comando de conexión cada vez que quisiéramos conectarnos a la EC2.
-Grupo de seguridad
+**Grupo de seguridad**
 Se hicieron algunas modificaciones al grupo de seguridad estándar para permitir que todos los miembros del equipo se pudieran conectar de manera fácil al servidor de la EC2
-
-
+![AMI](Imagenes/securitygroup.png)
+![AMI](Imagenes/inboundrules.png)
 
 **Paso 4**: Se creó un key-pair llamado "key-mno-2020.pem"
+![AMI](Imagenes/keypair.png)
 
 El resultado final fue esta EC2
+![AMI](Imagenes/ec2.png)
 
 ### Instalación de herramientas de trabajo en la EC2
 
 Inicialmente se instaló Anaconda en la EC2 pero al final se decidió trabajar con un contenedor de Docker que contiene todos los requerimientos necesarios para ejecutar el código del proyecto.
 Se corrió un bash script que estaba en la wiki de AWS del repositorio de MNO para instalar git y docker 
-
+![AMI](Imagenes/bash-docker.png)
 Se descargó y utilizó la imagen de docker jupyter_numerical para correr nuestro proyecto.
-
+![AMI](Imagenes/docker-image.png)
 El comando usado para correr la imagen fue el siguiente
 Correr docker imagen jupyter_numerical
 ```bash
@@ -121,7 +123,8 @@ ssh -i "key-mno-2020.pem" -NL localhost:5555:localhost:8888 ubuntu@18.205.126.18
 
 Finalmente una vez configurado el security group fue posible conectarse al servidor de Jupyter Lab usando una dirección IP e introduciendo el password: querty
 http://18.205.126.183:8888/
-
+![AMI](Imagenes/login.png)
+![AMI](Imagenes/jupyterlab.png)
 
 Con el propósito de reproducibilidad del proyecto y para que todos los equipos (**P-Team**, **R-Team** y **PM**) tuvieran un entorno común de trabajo, se empleó la imagen de docker basada en Python del curso MNO 2020 (palmoreck/jupyterlab_numerical:1.1.0) así como una instancia de AWS con las siguientes características:
 
