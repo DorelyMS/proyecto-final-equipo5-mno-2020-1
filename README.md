@@ -81,29 +81,49 @@ La organización del repositorio se realizó a través una serie de carpetas, la
 A continuación, se describen los pasos utilizados para la creación de la instancia en AWS para poder trabajar de manera más rápida y eficiente.
 ### Crear la maquina EC2
 Se utilizó una cuenta de AWS Educate lo cual limitó un poco la opciones a elegir de máquinas EC2.
-**Paso 1**: Se lanzó una instancia de AWS de tipo EC2, la Amazon Machine Image (AMI) que se eligió fue una del tipo  **ubuntu/images/hvm-ssd/ubuntu-bionic-18.04-amd64-server-20200408**
+**Paso 1**: Se lanzó una instancia de AWS de tipo EC2, la Amazon Machine Image (AMI) que se eligió fue una del tipo  **ubuntu/images/hvm-ssd/ubuntu-bionic-18.04-amd64-server-20200408**  
+
 ![AMI](Imagenes/AMI.png)
+
 **Paso 2**: El tipo de instancia que se eligió fue una t2.2xlarge que cuenta con 8 VCPUs y tiene 32 GB de memoria RAM y 32GB de memoria en disco duro, originalmente habíamos elegido usar una máquina de tipo p2.xlarge que cuenta con GPUs disponibles pero debido a las restricciones de la cuenta AWS Educate no fue posible.
 ![InstanceType](Imagenes/instance-type.png)
+
+```
+Infraestructura: AWS 
+
++ AMI: ubuntu/images/hvm-ssd/ubuntu-bionic-18.04-amd64-server-20200408 (ami-085925f297f89fce1)
++ EC2 instance:
+  + GPU: 1
+  + vCPU: 8
+  + RAM: 32 GB
+  + OS: Linux AMI 2018.03.0
+  + Storage: 32 GB
+```
 **Paso 3**: Se configuró la instancia siguiendo los pasos de la wiki  de AWS del curso de MNO situados en esta liga web https://github.com/ITAM-DS/analisis-numerico-computo-cientifico/wiki/1.1.Configuracion-de-servicios-basicos-para-uso-de-AWS
 En resumen, se tuvo que configurar una VPC, una subnet pública, un grupo de seguridad, una IP elástica para no tener que cambiar el comando de conexión cada vez que quisiéramos conectarnos a la EC2.
 **Grupo de seguridad**
-Se hicieron algunas modificaciones al grupo de seguridad estándar para permitir que todos los miembros del equipo se pudieran conectar de manera fácil al servidor de la EC2
+Se hicieron algunas modificaciones al grupo de seguridad estándar para permitir que todos los miembros del equipo se pudieran conectar de manera fácil al servidor de la EC2  
+
 ![AMI](Imagenes/securitygroup.png)
 ![AMI](Imagenes/inboundrules.png)
 
-**Paso 4**: Se creó un key-pair llamado "key-mno-2020.pem"
+**Paso 4**: Se creó un key-pair llamado "key-mno-2020.pem"  
+
 ![AMI](Imagenes/keypair.png)
 
-El resultado final fue esta EC2
+El resultado final fue esta EC2  
+
 ![AMI](Imagenes/ec2.png)
 
 ### Instalación de herramientas de trabajo en la EC2
 
 Inicialmente se instaló Anaconda en la EC2 pero al final se decidió trabajar con un contenedor de Docker que contiene todos los requerimientos necesarios para ejecutar el código del proyecto.
-Se corrió un bash script que estaba en la wiki de AWS del repositorio de MNO para instalar git y docker 
+Se corrió un bash script que estaba en la wiki de AWS del repositorio de MNO para instalar git y docker   
+
 ![AMI](Imagenes/bash-docker.png)
-Se descargó y utilizó la imagen de docker jupyter_numerical para correr nuestro proyecto.
+
+Se descargó y utilizó la imagen de docker jupyter_numerical para correr nuestro proyecto.  
+
 ![AMI](Imagenes/docker-image.png)
 El comando usado para correr la imagen fue el siguiente
 Correr docker imagen jupyter_numerical
@@ -134,24 +154,5 @@ docker run --rm -v <ruta a mi directorio>:/datos --name jupyterlab_numerical
 ```
 Documentación de la imagen de docker palmoreck/jupyterlab_numerical:1.1.0 en [liga](https://github.com/palmoreck/dockerfiles/tree/master/jupyterlab/numerical)
 
-```
-Infraestructura: AWS (ESTE SOLO ES UN EJEMPLO)
 
-+ AMI: ami-0915e09cc7ceee3ab, Amazon Linux AMI 2018.03.0 (HVM)
-+ EC2 instance:
-  + GPU: 1
-  + vCPU: 1
-  + RAM: 1 GB
-+ OS: Linux AMI 2018.03.0
-+ Volumes: 1
-  + Type: gp2
-  + Size: 16 GB
-+ RDS: PostgreSQL
-  + Engine: PostgreSQL
-  + Engine version: 10.6
-  + Instance: db.t2.micro
-  + vCPU: 1
-  + RAM: 1 GB
-  + Storage: 80 GB
-```
 Con ello se habilitó la posibilidad de realizar el trabajo mediante sucesivos *Jupyter Notebooks*.
