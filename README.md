@@ -48,7 +48,7 @@ Para probar la librería utilizamos un extracto de la base de datos original que
 
 La base extracto con la que realizamos nuestra investigación de la librería contaba con sólo *100,000* usuarios y las *17,770* películas. Las únicas columnas disponibles son el ID de usuario y película, ID de usuario asignado respecto al renglón **![i](https://render.githubusercontent.com/render/math?math=i)**, calificación de la película y fecha con formato YYYY-MM-DD. Para esta base de datos se tiene un total de 20,968,941 entradas ya que no todos los usuarios califican todas las películas. Las entradas de esta base se muestras a continuación:
 
-![Ejemplo_Matriz_Original0.1\textwidth](https://github.com/DorelyMS/proyecto-final-equipo5-mno-2020-1/blob/master/Ejemplo_Matriz_Original.png)
+![Ejemplo_Matriz_Original0.1\textwidth](https://github.com/DorelyMS/proyecto-final-equipo5-mno-2020-1/blob/master/Imagenes/Ejemplo_Matriz_Original.png)
 
 Finalmente, para la evaluación del desempeño de libmf en la predicción de las calificaciones, se separó el datasetanterior en una muestra de entrenamiento y validación a partir de las columnas peli\_id, y usuario\_id. Seleccionando aleatoriamente el 20\% de los usuarios y películas en validación y el resto en entrenamiento.
 
