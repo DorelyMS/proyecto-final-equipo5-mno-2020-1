@@ -15,7 +15,6 @@ Implementación (en el repo): [Implementación](https://github.com/DorelyMS/proy
 ## Indice del proyecto
 
 1. [Introducción](https://github.com/DorelyMS/proyecto-final-equipo5-mno-2020-1/blob/master/README.md#introducci%C3%B3n)
-2. [Planteamiento del Problema](https://github.com/DorelyMS/proyecto-final-equipo5-mno-2020-1/blob/master/README.md#planteamiento-del-problema-de-sistemas-de-recomendaci%C3%B3n)
 3. [Estructura del equipo](https://github.com/DorelyMS/proyecto-final-equipo5-mno-2020-1/blob/master/README.md#estructura-del-equipo)
 4. [Organización del Repositorio](https://github.com/DorelyMS/proyecto-final-equipo5-mno-2020-1/blob/master/README.md#organizaci%C3%B3n-del-repositorio)
 5. [Requerimientos de infraestructura](https://github.com/DorelyMS/proyecto-final-equipo5-mno-2020-1/blob/master/README.md#requerimientos-de-infraestructura)
@@ -72,7 +71,6 @@ La anterior estructura vigente hasta el 10 de mayo, se resume en la siguiente ta
 La organización del repositorio se realizó a través una serie de carpetas, las cuales se describen a continuación:
 
 + **Referencias:** En el apartado de [Referencias](https://github.com/DorelyMS/proyecto-final-equipo5-mno-2020-1/tree/master/Referencias) se añaden todos los textos que se consultaron para la realización de este trabajo.
-+ **Diseño de Muestra:** En la carpeta [obtención de muestra](https://github.com/DorelyMS/proyecto-final-equipo5-mno-2020-1/tree/master/Sampling_Design) se desarrolló el código para la obtención de las muestras de entrenamiento y validación para la base de datos de Netflix que se usará para el reporte de resultados.
 + **Implementación:** [Reportes de implementación](https://github.com/DorelyMS/proyecto-final-equipo5-mno-2020-1/tree/master/Implementation) del uso de libmf para pruebas con diferentes muestras y parámetros. 
 + **Avances:** Contiene un resumen de los [avances de proyecto final](https://github.com/DorelyMS/proyecto-final-equipo5-mno-2020-1/tree/master/Avances) detallado por **PM** y complementado por **P&R Teams** para efecto de reportar al profesor los avances en el desarrollo del proyecto, así como las nuevas tareas a realizar.
 + **Resultados**: Incluirá el [Reporte ejecutivo de resultados](https://github.com/DorelyMS/proyecto-final-equipo5-mno-2020-1/tree/master/Resultados) obtenido con la implementación del resultado final sobre nuestra base final depurada para nuestro caso práctico generado a partir de una instancia de AWS aplicando paralelización con una imagen de Docker.
@@ -81,7 +79,7 @@ La organización del repositorio se realizó a través una serie de carpetas, la
 Con el propósito de reproducibilidad del proyecto y para que todos los equipos (**P-Team**, **R-Team** y **PM**) tuvieran un entorno común de trabajo, se empleó la imagen de docker basada en Python del curso MNO 2020 (palmoreck/jupyterlab_numerical:1.1.0) así como una instancia de AWS. A continuación, se describen los pasos utilizados para la creación de la instancia en AWS para poder trabajar de manera más rápida y eficiente. 
 
 ### Crear la maquina EC2
-Se utilizó una cuenta de AWS Educate lo cual limitó un poco la opciones a elegir de máquinas EC2.
+Se utilizó una cuenta de AWS Educate lo cual limitó un poco las opciones a elegir de máquinas EC2.
 
 **Paso 1**: Se lanzó una instancia de AWS de tipo EC2, la Amazon Machine Image (AMI) que se eligió fue una del tipo  **ubuntu/images/hvm-ssd/ubuntu-bionic-18.04-amd64-server-20200408**  
 
@@ -129,7 +127,7 @@ El resultado final fue la siguiente EC2:
 
 ### Instalación de herramientas de trabajo en la EC2
 
-Inicialmente se instaló Anaconda en la EC2 pero al final se decidió trabajar con un contenedor de Docker que contiene todos los requerimientos necesarios para ejecutar el código del proyecto.
+Se decidió trabajar con un contenedor de Docker sobre la instancia que contiene todos los requerimientos necesarios para ejecutar el código del proyecto.
 Se corrió un bash script que estaba en la wiki de AWS del repositorio de MNO para instalar git y docker   
 
 
@@ -144,6 +142,7 @@ Se descargó y utilizó la imagen de docker jupyter_numerical para correr nuestr
 
 El comando usado para correr la imagen fue el siguiente
 Correr docker imagen jupyter_numerical
+
 ```bash
 sudo docker run --rm -v /home/ubuntu:/datos --name jupyterlab_numerical -p 8888:8888 -d palmoreck/jupyterlab_numerical:1.1.0 --ip=0.0.0.0 --no-browser
 ```
