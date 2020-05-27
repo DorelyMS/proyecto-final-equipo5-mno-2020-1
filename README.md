@@ -73,7 +73,7 @@ La organización del repositorio se realizó a través una serie de carpetas, la
 + **Referencias:** En el apartado de [Referencias](https://github.com/DorelyMS/proyecto-final-equipo5-mno-2020-1/tree/master/Referencias) se añaden todos los textos que se consultaron para la realización de este trabajo.
 + **Implementación:** [Reportes de implementación](https://github.com/DorelyMS/proyecto-final-equipo5-mno-2020-1/tree/master/Implementation) del uso de libmf para pruebas con diferentes muestras y parámetros. 
 + **Avances:** Contiene un resumen de los [avances de proyecto final](https://github.com/DorelyMS/proyecto-final-equipo5-mno-2020-1/tree/master/Avances) detallado por **PM** y complementado por **P&R Teams** para efecto de reportar al profesor los avances en el desarrollo del proyecto, así como las nuevas tareas a realizar.
-+ **Resultados**: Incluirá el [Reporte ejecutivo de resultados](https://github.com/DorelyMS/proyecto-final-equipo5-mno-2020-1/tree/master/Resultados) obtenido con la implementación del resultado final sobre nuestra base final depurada para nuestro caso práctico generado a partir de una instancia de AWS aplicando paralelización con una imagen de Docker.
++ **Resultados**: Incluirá la [Presentación de resultados](https://github.com/DorelyMS/proyecto-final-equipo5-mno-2020-1/tree/master/Resultados) obtenido con la implementación para nuestro sistema de recomendación generado a partir de una instancia de AWS aplicando paralelización con una imagen de Docker.
 
 En complemento, se presenta una versión esquemática de la organización de repositorio del proyecto:
 
@@ -92,8 +92,6 @@ En complemento, se presenta una versión esquemática de la organización de rep
 │   └── Avance2                                               <- Reporte de avances al 16 de Mayo de 2020
 │
 ├── Implementation                 <- Carpeta de reporte de ejercicios de implementación de libmf y libmf python
-│   ├── Reporte_resultados.ipynb                              <- Reporte ejecutivo de resultados
-│   ├── experimentos                                          <- Carpeta de experimentos para reporte de resultados
 │       ├── 0_Ejercicio_libmf      <- Carpeta con reporte de ejercicio inicial sobre uso de libmf bash sobre datos demo
 │           ├── Resultados_Ejercicio
 │           ├── output_demo_libmf.txt
