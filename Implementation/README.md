@@ -1,1 +1,1 @@
-En esta carpeta se colocan los ejercicios de implementación del uso de libmf para pruebas con diferentes muestras y parámetros.
+En esta carpeta se colocan los ejercicios de implementación del uso de libmf y libmf python para pruebas con diferentes muestras y parámetros con el propósito de exploración de la librería.
