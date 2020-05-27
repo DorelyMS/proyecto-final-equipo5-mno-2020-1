@@ -75,6 +75,49 @@ La organización del repositorio se realizó a través una serie de carpetas, la
 + **Avances:** Contiene un resumen de los [avances de proyecto final](https://github.com/DorelyMS/proyecto-final-equipo5-mno-2020-1/tree/master/Avances) detallado por **PM** y complementado por **P&R Teams** para efecto de reportar al profesor los avances en el desarrollo del proyecto, así como las nuevas tareas a realizar.
 + **Resultados**: Incluirá el [Reporte ejecutivo de resultados](https://github.com/DorelyMS/proyecto-final-equipo5-mno-2020-1/tree/master/Resultados) obtenido con la implementación del resultado final sobre nuestra base final depurada para nuestro caso práctico generado a partir de una instancia de AWS aplicando paralelización con una imagen de Docker.
 
+En complemento, se presenta una versión esquemática de la organización de repositorio del proyecto:
+
+```bash
+├── README.md                      <- Archivo readme del proyecto
+│
+├── Referencias                    <- Carpeta de referencias y materiales usados en el proyecto
+│   ├── Google News Personalization_Das etal.pdf              <- Referencias OCMF y BMF
+│   ├── One-Class Collaborative Filtering_Pan Rong_etal.pdf   <- Referencias OCMF y BMF
+│   ├── README.md                                             <- Archivo readme con links a referencias fuera del repo
+│
+├── Imagenes                       <- Carpeta de imágenes para readme
+│
+├── Avances                        <- Carpeta Reporte de de implementación desarrollada por E-Prog
+│   └── Avance1                                               <- Reporte de avances al 9 de Mayo de 2020
+│   └── Avance2                                               <- Reporte de avances al 16 de Mayo de 2020
+│
+├── Implementation                 <- Carpeta de reporte de ejercicios de implementación de libmf y libmf python
+│   ├── Reporte_resultados.ipynb                              <- Reporte ejecutivo de resultados
+│   ├── experimentos                                          <- Carpeta de experimentos para reporte de resultados
+│       ├── 0_Ejercicio_libmf      <- Carpeta con reporte de ejercicio inicial sobre uso de libmf bash sobre datos demo
+│           ├── Resultados_Ejercicio
+│           ├── output_demo_libmf.txt
+│           ├── README.md
+│       ├── 1_Ejercicio_libmf_demo <- Carpeta con reporte de ejercicio con uso de libmf bash sobre datos demo
+│       ├── 2_Ejemplo_libmf_python_matrices_aleatorias <- Carpeta con reporte de ejercicio de libmf python con matrices aleatorias
+│       ├── 3_BaseMuestra_Netflix  <- Carpeta con reporte de implementación de libmf bash con base muestra de Netflix
+│           ├── README.md
+│           ├── Paso1_SeparaBaseMuestraNetflix.ipynb
+│           ├── Paso2_Implementacion.ipynb
+│           ├── Reference_Files    <- Carpeta donde se colocan los archivos para descargar base muestra de películas de Netflix.
+│               ├── README.md
+│               ├── README_bajar_datos.md
+│               ├── movies_title_fix.csv
+│       ├── 4_BaseCompleta_Netflix <- Carpeta con reporte de implementación de libmf con base completa de Netflix
+│           ├── README.md
+│           ├── Paso1_CargaDatos.ipynb
+│           ├── Paso2_Prune_ncreate_train_test.ipynb
+│           ├── Adicional_BaseCompletaNetflix_libmf_python.ipynb
+│
+└── Resultados                     <- Carpeta de Reporte de Resultados para presentación
+
+```
+
 ## Requerimientos de infraestructura
 Con el propósito de reproducibilidad del proyecto y para que todos los equipos (**P-Team**, **R-Team** y **PM**) tuvieran un entorno común de trabajo, se empleó la imagen de docker basada en Python del curso MNO 2020 (palmoreck/jupyterlab_numerical:1.1.0) así como una instancia de AWS. A continuación, se describen los pasos utilizados para la creación de la instancia en AWS para poder trabajar de manera más rápida y eficiente. 
 
