@@ -50,6 +50,11 @@ La base extracto contaba con sólo *100,000* usuarios y las *17,770* películas.
 
 El dataset completo del concurso se extrajo de Kaggle y está compuesto de 4 archivos de texto (.txt), cada archivo contiene más de 20 millones de filas, que en conjunto generan alrededor de 100 Millones de líneas. Cada uno contiene las siguientes columnas:
 
++ ID de película (como la primera linea de cada registro y marcado con un numero seguido de :)
++ ID del cliente
++ Calificación (escala del 1 al 5)
++ Fecha de la calificación
+
 En seguida, se muestra el head del archivo 1 de 4 del concurso:
 
 ![Ejemplo_Head_Original0.1\textwidth](https://github.com/DorelyMS/proyecto-final-equipo5-mno-2020-1/blob/master/Imagenes/6_Head_Archivo1_txt_Netflix.png)
