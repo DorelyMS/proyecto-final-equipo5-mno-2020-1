@@ -1,1 +1,1 @@
-Esta carpeta incluirá el reporte ejecutivo de resultados obtenido con el uso de libmf sobre nuestra muestra de entrenamiento y validación para sobre nuestro caso práctico generado a partir de una instancia de AWS que generará recomendaciones utilizando paralelización con una imagen de Docker de Python .
+Esta carpeta incluye la presentación de resultados del Proyecto Final: Uso de LIBMF (A LIBrary for large-scale sparse Matrix Factorization) y python-LIBMF para sistemas de recomendación de películas con bases de datos de usuarios de Netflix.

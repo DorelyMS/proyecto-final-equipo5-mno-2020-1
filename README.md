@@ -30,50 +30,53 @@ Los principales enfoques para ofrecer soluciones a los sistemas de recomendació
 + Aquellos principalmente basados en contenido: En función de características de los estímulos, canciones o películas (por ejemplo, género, actores, país de origen, año, etc.) intentamos predecir el gusto por el estímulo. En este caso, se construyen variables derivadas del contenido de los artículos (por ejemplo: qué actores salen, año, etc. o en textos palabras que aparecen), e intentamos predecir el gusto a partir de esas características. Ejemplo: Si me gustó *Toy Story* entonces el sistema recomienda otras infantiles+animadas como *Monsters Inc*.
 + El enfoque colaborativo busca además “perfilar al usuario” para hacer recomendaciones, tomando como referencia a otros con características similares. Ejemplo: Si a un usuario le gustó *Piratas del Caribe y Alicia en el país de las maravillas*, vemos que a varios otros usuarios a los que también les gustaron otras películas de Johnny Depp, recomendamos “*Charlie y la fábrica de chocolate*”.
 
-
 Por otra parte, este tipo de sistemas se clasifican en dos tipos basados en la recolección de datos: El explícito, donde el usuario brinda la calificación directamente y el implícito en el que se deriva de la actividad de los usuarios. 
 
 A través de *machine learning*, apoyándose de métodos numéricos para encontrar soluciones a problemas de minimización no convexos, los sistemas de recomendación bajo enfoque colaborativo y datos explícitos han logrado tener una mejora notable en las recomendaciones. Esto se debe al uso de métodos basados en reducción de dimensionalidad o modelos de factores latentes: los cuales se basan en encontrar **![k](https://render.githubusercontent.com/render/math?math=k)** factores latentes (no observados) que describan películas con “contenido implícito similar”, y usuarios según su interés en esa dimensión.  
 
 El presente proyecto utiliza el enfoque colaborativo en sistemas de recomendación de películas para el estudio, dominio y explotación de la librería **LIBMF** (*A LIBrary for large-scale sparse Matrix Factorization*), usando el método de descenso en gradiente para la predicción de calificaciones que dará un usuario a las películas en una muestra de validación a partir de la factorización de la matriz de entrenamiento *R* con las calificaciones observadas por *m* usuarios y **![n](https://render.githubusercontent.com/render/math?math=n)** películas en términos de 2 matrices ![P \in \mathbb {R}^{kxm}](https://render.githubusercontent.com/render/math?math=P%20%5Cin%20%5Cmathbb%20%7BR%7D%5E%7Bkxm%7D) y ![Q \in \mathbb {R}^{kxn}](https://render.githubusercontent.com/render/math?math=Q%20%5Cin%20%5Cmathbb%20%7BR%7D%5E%7Bkxn%7D). En específico, el producto a evaluar a través de sistemas de recomendación son películas con ratings explícitos y se usará una base de datos de *Netflix* para sugerir ver aquella película con calificación más alta.
 
-LIBMF provee un método eficiente de programación en paralelo para encontrar la factorización de matrices de diferentes tipos. Su uso está disponible en C/C++, R, Python y puede ser compilado en Unix, Cygwin, Windows o en MacOS. Las pruebas en este caso se realizarán en Pyhton a través de la imagen de Docker usada en el curso de MNO 2020 (palmoreck/jupyterlab\_numerical:1.1.0) y se utilizará una instancia EC2 en AWS para poder realizar cómputo en la nube para poder trabajar con la muestra de datos de dimensiones *![10^6](https://render.githubusercontent.com/render/math?math=10%5E6)*.
+LIBMF provee un método eficiente de programación en paralelo para encontrar la factorización de matrices de diferentes tipos. Su uso está disponible en C/C++, R, Python y puede ser compilado en Unix, Cygwin, Windows o en MacOS. Las pruebas en este caso se realizaron en Pyhton y Bash a través de la imagen de Docker usada en el curso de MNO 2020 (palmoreck/jupyterlab\_numerical:1.1.0) y una instancia EC2 en AWS para poder realizar cómputo en la nube para poder trabajar con la muestra de datos de Netflix y la base completa del concurso **Netflix Prize**
 
 Para problemas en general, la factorización de matrices busca descomponer una matriz *R* de dimensiones **![m \times n](https://render.githubusercontent.com/render/math?math=m%20%5Ctimes%20n)** en dos matrices: ![P \in \mathbb {R}^{kxm}](https://render.githubusercontent.com/render/math?math=P%20%5Cin%20%5Cmathbb%20%7BR%7D%5E%7Bkxm%7D) y ![Q \in \mathbb {R}^{kxn}](https://render.githubusercontent.com/render/math?math=Q%20%5Cin%20%5Cmathbb%20%7BR%7D%5E%7Bkxn%7D). La importancia de la descomposición de matrices se debe a que se busca aprender de la matriz *R* de tal forma en la que el producto de matrices ![P^{\rm T}Q](https://render.githubusercontent.com/render/math?math=P%5E%7B%5Crm%20T%7DQ) consiga reducir la dimensionalidad de los datos y hacer más eficiente la predicción de nuevos datos. En este tipo de representación, las entradas de las matrices ![r_i_j](https://render.githubusercontent.com/render/math?math=r_i_j) indican para nuestro problema práctico la calificación que el usuario **![i](https://render.githubusercontent.com/render/math?math=i)** le dio a la película **![j](https://render.githubusercontent.com/render/math?math=j)**. El uso de la representación de este problema a través de matrices, con lleva al uso de dimensiones grandes, además de que éstas puedan ser singulares y suelen tener demasiadas entradas con ceros (ralas). Esto sucede porque prácticamente nadie ve todas las películas.
 
 ### Base de Datos *Netflix*
 
-Para probar la librería utilizamos un extracto de la base de datos original que proviene del concurso de *Netflix* o *Netflix Price* que se llevó a cabo en 2009 y fue tomada de la clase de Métodos Analíticos del ITAM impartida por el profesor Felipe González. La base completa contiene más de *100* millones de calificaciones de *480,189* usuarios de la plataforma seleccionados aleatoriamente y más de *17,770* títulos de películas. Las calificaciones obtenidas van en una escala del 1 al 5 y las evaluaciones fueron entre Octubre 1998 a Diciembre 2005.
+Para probar la librería primero utilizamos un extracto de la base de datos original que proviene del concurso de *Netflix* o *Netflix Price* que se llevó a cabo en 2009 y fue tomada de la clase de Métodos Analíticos del ITAM impartida por el profesor Felipe González. Como un ejercicio complementario, también se consiguió utilizar LIBMF sobre la base de datos completa del concurso que contiene más de *100* millones de calificaciones de *480,189* usuarios de la plataforma seleccionados aleatoriamente y más de *17,770* títulos de películas. Las calificaciones obtenidas van en una escala del 1 al 5 y las evaluaciones fueron entre Octubre 1998 a Diciembre 2005.
 
-La base extracto con la que realizamos nuestra investigación de la librería contaba con sólo *100,000* usuarios y las *17,770* películas. Las únicas columnas disponibles son el ID de usuario y película, ID de usuario asignado respecto al renglón **![i](https://render.githubusercontent.com/render/math?math=i)**, calificación de la película y fecha con formato YYYY-MM-DD. Para esta base de datos se tiene un total de 20,968,941 entradas ya que no todos los usuarios califican todas las películas. Las entradas de esta base se muestras a continuación:
+La base extracto contaba con sólo *100,000* usuarios y las *17,770* películas. Las únicas columnas disponibles son el ID de usuario y película, ID de usuario asignado respecto al renglón **![i](https://render.githubusercontent.com/render/math?math=i)**, calificación de la película y fecha con formato YYYY-MM-DD. Para esta base de datos se tiene un total de 20,968,941 entradas ya que no todos los usuarios califican todas las películas. Las entradas de esta base se muestras a continuación:
 
 ![Ejemplo_Matriz_Original0.1\textwidth](https://github.com/DorelyMS/proyecto-final-equipo5-mno-2020-1/blob/master/Imagenes/Ejemplo_Matriz_Original.png)
 
-Finalmente, para la evaluación del desempeño de libmf en la predicción de las calificaciones, se separó el dataset anterior en una muestra de entrenamiento y validación a partir de las columnas peli\_id, y usuario\_id. Seleccionando aleatoriamente el 20\% de los usuarios y películas en validación y el resto en entrenamiento.
+El dataset completo del concurso se extrajo de Kaggle y está compuesto de 4 archivos de texto (.txt), cada archivo contiene más de 20 millones de filas, que en conjunto generan alrededor de 100 Millones de líneas. Cada uno contiene las siguientes columnas:
+
+En seguida, se muestra el head del archivo 1 de 4 del concurso:
+
+![Ejemplo_Head_Original0.1\textwidth](https://github.com/DorelyMS/proyecto-final-equipo5-mno-2020-1/blob/master/Imagenes/6_Head_Archivo1_txt_Netflix.png)
 
 ## Estructura del equipo
 
 Para el desarrollo del proyecto, la división de los integrantes considera una distribución adaptada a su porcentaje de avance, por lo que de manera inicial, se decidió dividir al equipo en 2 partes: el primero y más grande, encargado de la implementación del uso de libmf para resolver nuestro caso práctico (**Equipo de Programación, o P-Team**) y el segundo, encargado de la documentación, revisión de los reportes de resultados para su presentación y trabajo escrito (**Equipo de Revisión, o R-Team**). Finalmente, ambos grupos fueron coordinados por un project manager (**PM**)
 
-La anterior estructura vigente hasta el 10 de mayo, se resume en la siguiente tabla:
+La estructura del equipo a lo largo del proyecto se resume en la siguiente tabla:
 
-| #    | Rol                                      | Persona      | Github    |
+| #    | Rol                                       | Persona      | Github    |
 | ---- | ------------------------ | ------------ | --------- |
-| 1    | Programación                             |  Alfie       | gonzalezalfie     |
-| 2    | Programación                             |  Guillermo   | gzarazua          |
-| 3    | Programación                             |  Javier      | valencig          |
-| 4    | Programación                             |  Maggie      | maggiemusa        |
-| 5    |Investigación, Revisión & documentación   |  Oscar       | oaguilarca        |
-| 6    | Project Manager                          | Dorely       | DorelyMS          |
+| 1    | Programación & documentación              |  Alfie       | gonzalezalfie     |
+| 2    | Programación & documentación              |  Guillermo   | gzarazua          |
+| 3    | Programación & documentación              |  Javier      | valencig          |
+| 4    | Programación, Revisión & documentación    |  Maggie      | maggiemusa        |
+| 5    | Investigación, Revisión & documentación   |  Oscar       | oaguilarca        |
+| 6    | Project Manager, Revisión & documentación | Dorely       | DorelyMS          |
 
 ## Organización del Repositorio
 
 La organización del repositorio se realizó a través una serie de carpetas, las cuales se describen a continuación:
 
 + **Referencias:** En el apartado de [Referencias](https://github.com/DorelyMS/proyecto-final-equipo5-mno-2020-1/tree/master/Referencias) se añaden todos los textos que se consultaron para la realización de este trabajo.
-+ **Implementación:** [Reportes de implementación](https://github.com/DorelyMS/proyecto-final-equipo5-mno-2020-1/tree/master/Implementation) del uso de libmf para pruebas con diferentes muestras y parámetros. 
++ **Implementación:** [Código y Notebooks de implementación](https://github.com/DorelyMS/proyecto-final-equipo5-mno-2020-1/tree/master/Implementation) del uso de libmf para pruebas con diferentes muestras y parámetros. 
 + **Avances:** Contiene un resumen de los [avances de proyecto final](https://github.com/DorelyMS/proyecto-final-equipo5-mno-2020-1/tree/master/Avances) detallado por **PM** y complementado por **P&R Teams** para efecto de reportar al profesor los avances en el desarrollo del proyecto, así como las nuevas tareas a realizar.
-+ **Resultados**: Incluirá la [Presentación de resultados](https://github.com/DorelyMS/proyecto-final-equipo5-mno-2020-1/tree/master/Resultados) obtenido con la implementación para nuestro sistema de recomendación generado a partir de una instancia de AWS aplicando paralelización con una imagen de Docker.
++ **Resultados**: Incluye la [Presentación de resultados](https://github.com/DorelyMS/proyecto-final-equipo5-mno-2020-1/tree/master/Resultados) obtenido con la implementación para nuestro sistema de recomendación generado a partir de una instancia de AWS aplicando paralelización con una imagen de Docker.
 
 En complemento, se presenta una versión esquemática de la organización de repositorio del proyecto:
 
@@ -92,6 +95,8 @@ En complemento, se presenta una versión esquemática de la organización de rep
 │   └── Avance2                                               <- Reporte de avances al 16 de Mayo de 2020
 │
 ├── Implementation                 <- Carpeta de reporte de ejercicios de implementación de libmf y libmf python
+│   ├──Codigo_Implementacion_Final <- Carpeta con reporte de implementación de libmf bash con base muestra y Completa de Netflix en formato .py
+│   ├──REAME.md
 │       ├── 0_Ejercicio_libmf      <- Carpeta con reporte de ejercicio inicial sobre uso de libmf bash sobre datos demo
 │           ├── Resultados_Ejercicio
 │           ├── output_demo_libmf.txt
@@ -102,17 +107,23 @@ En complemento, se presenta una versión esquemática de la organización de rep
 │           ├── README.md
 │           ├── Paso1_SeparaBaseMuestraNetflix.ipynb
 │           ├── Paso2_Implementacion.ipynb
+│           ├── Insumos_LIBMF_Bash    <- Carpeta donde se colocan los archivos demo.sh modificados para correr los modelos de Netflix en libmf bash.
+│               ├── demo.sh
+│               ├── netflixdemo.sh
+│           ├── Resultados_LIBMF_Bash <- Carpeta donde se colocan las salidas de los modelos en libmf bash sobre la base muestra de Netflix con fines ilustrativos.
+│               ├── DesempeñoModelo_BaseMuestra_.txt
+│               ├── ocmf_model
 │           ├── Reference_Files    <- Carpeta donde se colocan los archivos para descargar base muestra de películas de Netflix.
 │               ├── README.md
 │               ├── README_bajar_datos.md
 │               ├── movies_title_fix.csv
-│       ├── 4_BaseCompleta_Netflix <- Carpeta con reporte de implementación de libmf con base completa de Netflix
+│       ├── 4_BaseCompleta_Netflix <- Carpeta con reporte de implementación de python-libmf con base completa de Netflix
 │           ├── README.md
 │           ├── Paso1_CargaDatos.ipynb
 │           ├── Paso2_Prune_ncreate_train_test.ipynb
 │           ├── Adicional_BaseCompletaNetflix_libmf_python.ipynb
 │
-└── Resultados                     <- Carpeta de Reporte de Resultados para presentación
+└── Resultados                     <- Carpeta con Presentación de Resultados del Proyecto
 
 ```
 
